@@ -1,0 +1,10 @@
+[Unit]
+Description=restart the service on failure
+After=network-online.target
+
+[Service]
+ExecStart=/home/stephen/.volta/bin/node /src/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
